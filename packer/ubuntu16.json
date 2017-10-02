@@ -10,7 +10,6 @@
 		"machine_type": "f1-mirco"
 		}
 	]
-
 	"provisioners": [
 		{
 		"type": "shell",
@@ -22,5 +21,4 @@
 		"execute_command": "sudo {{.Path}}"
 		}
 	]
-
 }
