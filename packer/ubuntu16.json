@@ -7,7 +7,7 @@
 		"source_image": "ubuntu-1604-xenial-v20170919",
 		"zone": "europe-west1-b",
 		"ssh_username": "appuser",
-		"machine_type": "f1-mirco"
+		"machine_type": "f1-micro"
 		}
 	],
 	"provisioners":[
