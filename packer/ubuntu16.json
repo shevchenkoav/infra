@@ -1,24 +1,31 @@
+
+
 {
-	"builders":[
-		{
-		"type": "googlecompute",
-		"project_id": "demodevops-180715",
-		"image_name": "reddit-base-{{timestamp}}",
-		"source_image": "ubuntu-1604-xenial-v20170919",
-		"zone": "europe-west1-b",
-		"ssh_username": "appuser",
-		"machine_type": "f1-micro"
-		}
+"variables":{
+	"proj_id": null,
+	"machine_type": null
+	},
+"builders":[
+	{
+	"_comment": "Packer ubuntu template fot GCP.",
+	"type": "googlecompute",
+	"project_id": "{{user 'proj_id'}}",
+	"machine_type": "{{user 'machine_type'}}",
+	"image_name": "reddit-base-{{timestamp}}",
+	"source_image": "ubuntu-1604-xenial-v20170919",
+	"zone": "europe-west1-b",
+	"ssh_username": "appuser"
+	}
 	],
-	"provisioners":[
-		{
-		"type": "shell",
-		"script": "scripts/install_ruby.sh"
-		},
-		{
-		"type": "shell",
-		"script": "scripts/install_mongodb.sh",
-		"execute_command": "sudo {{.Path}}"
-		}
+"provisioners":[
+	{
+	"type": "shell",
+	"script": "scripts/install_ruby.sh"
+	},
+	{
+	"type": "shell",
+	"script": "scripts/install_mongodb.sh",
+	"execute_command": "sudo {{.Path}}"
+	}
 	]
 }
