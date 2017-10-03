@@ -1,4 +1,5 @@
 {
-"project_id": "demodevops-180715",
-"machine_type": "f1-micro"
+	"project_id": "demodevops-180715",
+	"source_image": "ubuntu-1604-xenial-v20170919",
+	"machine_type": "f1-micro"
 }
