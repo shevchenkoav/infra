@@ -1,5 +1,3 @@
-
-
 {
 "variables":{
 	"proj_id": null,
@@ -8,23 +6,22 @@
 	},
 "builders":[
 	{
-	"_comment": "Packer ubuntu template fot GCP.",
 	"image_description": "packer image redditappserv",
 	
 	"type": "googlecompute",
 	"image_name": "reddit-base-{{timestamp}}",
 	"zone": "europe-west1-b",
 	
-	"project_id": "{{user 'proj_id'}}",
+	"project_id": "{{user `proj_id`}}",
 	"ssh_username": "appuser",
 	
 	"source_image": "{{user `source_image`}}",
-	"machine_type": "{{user 'machine_type'}}",
+	"machine_type": "{{user `machine_type`}}",
 	"disk_size": "10",
 	"disk_type": "pd-standard",
 	
 	"network": "default",
-	"tags": "puma-server"	
+	"tags": "puma-server"
 	}
 	],
 "provisioners":[
@@ -32,10 +29,12 @@
 	"type": "shell",
 	"script": "scripts/install_ruby.sh"
 	},
+	
 	{
 	"type": "shell",
 	"script": "scripts/install_mongodb.sh",
 	"execute_command": "sudo {{.Path}}"
 	}
+	
 	]
 }
