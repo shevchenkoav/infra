@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 #
-# deploy reddit app
+# deploy reddit app and enable puma service
 
-git clone https://github.com/Artemmkin/reddit.git
+git clone https://github.com/shevchenkoav/reddit.git
 cd reddit && bundle install
-cd /etc/systemd/system
 sudo curl -Ssl https://github.com/shevchenkoav/infra/blob/base-os-packer/packer/files/puma.service > puma.service
+sudo cp puma.service /etc/systemd/system
 sudo systemctl enable puma.service
-
-# cp puma.service /etc/systemd/system
-# rm puma.service
-# systemctl enable puma.service
-# puma -d
