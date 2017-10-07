@@ -8,5 +8,3 @@ curl -Ssl https://raw.githubusercontent.com/shevchenkoav/infra/base-os-packer/pa
 	| bash
 curl -Ssl https://raw.githubusercontent.com/shevchenkoav/infra/base-os-packer/packer/scripts/deploy.sh \
 	| sudo -u appuser -i bash
-curl -Ssl
-	| sudo -u appuser -i bash
