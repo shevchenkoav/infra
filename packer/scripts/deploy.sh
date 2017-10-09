@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # deploy reddit app
-git clone https://github.com/shevchenkoav/reddit.git
+git clone https://github.com/Artemmkin/reddit.git
 cd reddit && bundle install
 
 # enable puma service.
