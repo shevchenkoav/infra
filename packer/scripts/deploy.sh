@@ -5,7 +5,7 @@
 git clone https://github.com/shevchenkoav/reddit.git
 cd reddit && bundle install
 
-# enable puma service
+# enable puma service.
 sudo curl -Ssl https://github.com/shevchenkoav/infra/blob/base-os-packer/packer/files/puma.service > puma.service
 sudo cp puma.service /etc/systemd/system
 sudo systemctl start puma
