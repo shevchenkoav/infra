@@ -1,5 +1,5 @@
 {
-	"project_id": "demodevops-180715",
+	"project_id": "terraform-project-182418",
 	"source_image": "ubuntu-1604-xenial-v20170919",
 	"machine_type": "f1-micro"
 }
