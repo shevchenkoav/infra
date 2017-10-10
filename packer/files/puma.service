@@ -1,5 +1,5 @@
 [Unit]
-Description=Puma HTTP Server
+Description=Puma HTTP Server service
 After=network.target
 
 [Service]
