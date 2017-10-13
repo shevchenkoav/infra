@@ -29,16 +29,16 @@ resource "google_compute_instance" "app" {
     type = "ssh"
     user = "appuser"
     agent = false
-    private_key = "${file("~/.ssh/appuser")}"
+    private_key = "${file(var.private_key_path)}"
   }
   provisioner "file" {
     source            = "files/puma.service"
     destination       = "~/reddit/puma.service"
   }
 # не трубется, образ собран пакером.
-#  provisioner "remote-exec" {
-#    script          = "scripts/deploy.sh"
-#  }
+  #  provisioner "remote-exec" {
+  #    script          = "scripts/deploy.sh"
+  #  }
 }
 
 resource "google_compute_firewall" "firewall_puma" {
