@@ -2,11 +2,4 @@
 
 INFO: Install & Deploy Puma web-сервер for Ruby, MongoDB & GCP infrastructure.
 
-# Packer
-
-Done
-
 # Terraform
-
-
-# Ansible
