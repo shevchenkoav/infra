@@ -10,24 +10,24 @@
 	},
 "builders":[
 	{
-		"image_description": "packer image redditappserv",
-		
+		"image_description": "packer notimmutable image with ruby & mongo",
+
 		"type": "googlecompute",
-		"image_name": "reddit-base-{{timestamp}}",
+		"image_name": "reddit-base-notimmutable-{{timestamp}}",
 		"zone": "{{ user `zone` }}",
-		
+
 		"project_id": "{{user `project_id`}}",
 		"ssh_username": "appuser",
-		
+
 		"source_image": "{{user `source_image`}}",
 		"machine_type": "{{user `machine_type`}}",
 		"disk_name": "{{ user `disk_name` }}",
 		"disk_size": "{{ user `disk_size` }}",
 		"disk_type": "{{ user `disk_type` }}",
-		
+
 		"network": "default",
 		"tags": "puma-server",
-		
+
 		"startup_script_file": "{{ user `startup_script_file` }}"
 	}
 	],
@@ -37,6 +37,5 @@
 		"script": "scripts/startup.sh",
 		"execute_command": "sudo {{.Path}}"
 	}
-	
 	]
 }
