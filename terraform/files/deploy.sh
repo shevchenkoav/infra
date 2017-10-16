@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-#deploy reddit app and enable puma service.
+#deploy reddit app and enable puma service
+#
 #Развертывание на базе образа: https://github.com/shevchenkoav/packer-immutable-gcloud-image.git
 
 set -e
