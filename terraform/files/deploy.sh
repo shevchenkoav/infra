@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 #deploy reddit app and enable puma service
 #
@@ -7,6 +7,7 @@
 set -e
 
 source ~/.profile
+rm -rf reddit
 git clone https://github.com/Artemmkin/reddit.git
 cd reddit
 bundle install
