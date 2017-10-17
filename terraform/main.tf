@@ -30,8 +30,13 @@ resource "google_compute_instance" "app" {
     # сеть, к которой присоединить данный интерфейс
     network     = "default"
 
+    #Добавляем связанный ресурс
+    access_config = {
+      nat_ip = "${google_compute_address.app_ip.address}"
+    }
+
     # использовать ephemeral IP для доступа из Интернет
-    access_config {}
+    # access_config {}
   }
 
   connection {
@@ -49,6 +54,12 @@ resource "google_compute_instance" "app" {
   provisioner "remote-exec" {
     script      = "files/deploy.sh"
   }
+}
+
+ # адрес IP
+
+resource "google_compute_address" "app_ip" {
+  name = "reddit-app-ip"
 }
 
  # Ресурсы фаервола
