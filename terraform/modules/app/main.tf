@@ -1,9 +1,3 @@
-#provider "google" {
-#  project       = "${var.project}"
-#  region        = "europe-west1"
-#  version       = "0.1.3"
-#}
-
  # Сборка ресурса инстанса с деплоем приложения (FRY).
 
 resource "google_compute_instance" "app" {
