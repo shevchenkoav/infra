@@ -1,0 +1,5 @@
+{
+	"project_id": "terraform-project-182418",
+	"source_image_family": "ubuntu-1604-lts",
+	"machine_type": "f1-micro"
+}
