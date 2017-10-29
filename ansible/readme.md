@@ -50,12 +50,23 @@ ssh-keygen -t rsa -f ~/.ssh/appuser -C appuser -P ""
 
 # GCE (Use this command to create virtual machine and deploy Puma application)
 
+ssh-keygen -t rsa -f ~/.ssh/appuser -C appuser ""
+
 gcloud config set project [Project_name]
 gcloud compute instances create --boot-disk-size=10GB --image=ubuntu-1604-xenial-v20170815a --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server --restart-on-failure --zone=europe-west1-b reddit-app
 // --metadata-from-file startup-script=/Users/anton/infra/install.sh
 
 gcloud compute instances list --format json
-#for ansible (cygwin) on windows need copy ssh-keys from c:/users/username/.ssh/*sshkeys*
+#for ansible (cygwin) on windows need copy ssh-keys from c:/users/username/.ssh/*sshkeys* (if exist).
 
 cp ansible directory
-ansible-playbook -u ubuntu -i "35.195.55.233," packer_app.yml
+ansible-playbook -u ubuntu -i "{IP}," packer_app.yml
+
+ansible-playbook reddit_app.yml --limit db --syntax-check
+#pip install ansible-lint
+
+# GCP Compute engine management with ansible
+https://cloud.google.com/solutions/google-compute-engine-management-puppet-chef-salt-ansible#ansible
+
+#Dynamic inventory
+--
