@@ -16,7 +16,7 @@ terraform {
 
 # [modules] terraform get
 
-module "application" {
+module "app" {
   source              = "../modules/app"
   public_key_path     = "${var.public_key_path}"
   app_disk_image      = "${var.app_disk_image}"
