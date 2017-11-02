@@ -31,5 +31,5 @@ module "db" {
 module "vpc" {
   source              = "../modules/vpc"
   public_key_path     = "${var.public_key_path}"
-  source_ranges       = ["46.188.60.174/32"]
+#  source_ranges       = ["46.188.60.174/32"]
 }
