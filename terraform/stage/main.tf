@@ -4,6 +4,16 @@ provider "google" {
 #  version            = "0.1.3"
 }
 
+# statefile (terraform.tfstate) -> remote backend
+
+terraform {
+  backend "gcs" {
+    bucket  = "tfstate-store-sav"
+    path    = "../terraform.tfstate"
+    project = "terraform-project-182418"
+  }
+}
+
 # [modules] terraform get
 
 module "app" {
