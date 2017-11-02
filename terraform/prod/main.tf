@@ -8,7 +8,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket  = "tfstate-store-sav"
+    bucket  = "tfstate-store-sav_1"
     path    = "main/terraform.tfstate"
     project = "terraform-project-182418"
   }
