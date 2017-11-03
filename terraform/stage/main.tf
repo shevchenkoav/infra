@@ -22,6 +22,7 @@ module "app" {
   app_disk_image      = "${var.app_disk_image}"
 }
 
+
 module "db" {
   source              = "../modules/db"
   public_key_path     = "${var.public_key_path}"
