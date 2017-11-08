@@ -1,0 +1,8 @@
+# Molecule managed
+
+---
+- address: 127.0.0.1
+  identity_file: /Users/alexandershevchenko/Git/infra/ansible/roles/db/molecule/default/.molecule/.vagrant/machines/instance/virtualbox/private_key
+  instance: instance
+  port: '2222'
+  user: ubuntu
