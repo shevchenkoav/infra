@@ -12,4 +12,3 @@
 *.logs
 
 # Example.Virtualenv in directory project without vitrualenvwrapper
-virtualenv
