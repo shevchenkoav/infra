@@ -1,6 +1,15 @@
+# Terraform
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
 *.retry
+
+# Vagrant
+.vagrant/
+*.log
+*.logs
+
+.cache
+.molecule
