@@ -21,7 +21,7 @@
       register: server
       with_items: "{{ molecule_yml.platforms }}"
 
-    # Mandatory configuration for Molecule to function.
+    # Mandatory configuration for Molecule to function..
 
     - name: Populate instance config
       set_fact:

@@ -11,4 +11,5 @@
 *.log
 *.logs
 
-# Example.Virtualenv in directory project without vitrualenvwrapper
+.cache
+.molecule
