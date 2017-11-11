@@ -99,9 +99,9 @@ sudo apt-get install -y python-pip
 pip install --upgrade pip
 pip install ansible
 
-#Устанавливаем Vagrant и Ansible локально в OS X
+# Устанавливаем Vagrant и Ansible локально в OS X
 
-#Запускаем
+# Запускаем
 vagrant up --provider=virtualbox
 vagrant box list
 vagrant status
@@ -112,7 +112,7 @@ vagrant reload appserver
 vagrant destroy -f / <id>
 vagrant box remove -f [name]
 
-#install virtualenv & virtualenvwrapper
+# install virtualenv & virtualenvwrapper
 http://docs.python-guide.org/en/latest/dev/virtualenvs/
 pip install --user pipenv
 pip install virtualenv
@@ -122,7 +122,7 @@ virtualenv "virtualenv"
 cd "myproject" (virtualenv)
 pipenv install requests
 
-#activate virtualenv
+# activate virtualenv
 source virtualenv/bin/activate
 pip install -r ../requirements.txt
 cd ansible/roles/db
