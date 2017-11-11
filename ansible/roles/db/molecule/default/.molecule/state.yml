@@ -1,6 +1,6 @@
 # Molecule managed
 
 ---
-converged: false
+converged: true
 created: true
 driver: vagrant
